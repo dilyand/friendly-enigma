@@ -5,9 +5,13 @@ Read a very large file, containing a single continuous string of UTF-8 character
 ## Algo
 
 1.) Read the string in chunks, sort each chunk and write it to a tmp file.
+
 2.) Read the tmp files one char at a time, pushing the read chars onto a heap. Since the tmp files contain sorted strings, we are always reading the 'lowest' char from each tmp file.
+
 3.) Pop the min value from the heap and write it to the output file.
+
 4.) Read a new char from the same file where the popped min value originated.
+
 5.) Loop until all chars are read from all tmp files.
 
 ## Run tests
